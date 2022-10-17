@@ -36,6 +36,6 @@ Executing the binary after it has been built with GCC (TCP):
 
 > message -> character string containing information to send to server/client
 
-*NOTE: For the server 'message' it needs to follow 1-2 criteria in which is specified as the following: the server 'message' must be enclosed within single/double quotes as to encapsulate the entirety of the message being directed to the client/server or each individual ' ' (space) that is used to separate words within the message must be escaped via* '\ ' *(backslash)*
+*NOTE: For the server 'message' it needs to follow 1 out of 2 criteria in which is specified as the following: the server 'message' must be enclosed within single/double quotes as to encapsulate the entirety of the message being directed to the client/server or each individual ' ' (space) that is used to separate words within the message must be escaped via* '\ ' *(backslash)*
 
 
