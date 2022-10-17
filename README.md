@@ -5,15 +5,31 @@ A simple repository containing C source code used to demonstrate the basic capab
 ```
 gcc -std=c11 dgram_serv.c -o dgram_serv && gcc -std=c11 dgram_client.c -o dgram_client
 ```
-### Setting the server port to bind to the UDP socket:
+### Setting the server port to bind to the TCP/UDP socket:
+
+* Within `dgram_serv.c`
 ```C
 #define MYPORT "4950"
 ```
 
-Executing the binary after it has been built with GCC:
-1. ./dgram_serv 
-2. ./dgram_client server_address message
+* Within `stream_serv.c`
+```C
+#define PORT "3490"
+```
 
-server_address -> IPv4 address of target server
-message -> character string containing information to send to server
+Executing the binary after it has been built with GCC (UDP):
+```
+./dgram_serv 
+./dgram_client server_address message
+```
+
+Executing the binary after it has been built with GCC (TCP):
+```
+./stream_serv message
+./stream_client server_address
+```
+
+> server_address -> IPv4 address of target server (can specify Fully Qualified Domain Name if OPTs supported on remote server)
+
+> message -> character string containing information to send to server/client
 
